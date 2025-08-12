@@ -31,10 +31,10 @@ Clonar el repositorio y configura el entorno virtual:
 git clone <url-del-repositorio>
 cd <nombre-repo>
 python -m venv venv 
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+source venv/bin/activate    # Linux/Mac
+venv\Scripts\activate.bat   # Windows (CMD)
+.\venv\Scripts\Activate.ps1 # Windows (PowerShell)
 pip install -r requirements.txt
-
 ```
 Ejecutar migraciones
 ```
@@ -47,10 +47,15 @@ python manage.py runserver
 ```
 
 ### docker
-Clonar y ejecutar el servicio 
+Clonar repositorio
 ```
 git clone <url-del-repositorio>
 cd <nombre-repo>
+```
+
+Crear el contenedor y ejecutar el servicio (migraciones y servidor)
+
+```
 docker-compose up --build
 ```
 

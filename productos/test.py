@@ -2,6 +2,8 @@ from rest_framework.test import APITestCase
 from rest_framework import status
 from .models import Producto
 
+# Pruebas automaticas para validar cada endpoint de la API
+
 class ProductoAPITest(APITestCase):
     def setUp(self):
         self.list_url = '/api/productos/'
